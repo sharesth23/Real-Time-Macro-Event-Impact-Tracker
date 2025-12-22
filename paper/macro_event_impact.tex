@@ -1,0 +1,86 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{geometry}
+\usepackage{hyperref}
+
+\geometry{margin=1in}
+
+\title{Macro Event Risk and Cross-Asset Correlation Breakdown}
+\author{Your Name}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Macroeconomic announcements are a primary driver of short-horizon risk in global markets.
+This paper studies how major macro events such as CPI, Non-Farm Payrolls, and FOMC decisions
+impact equities, foreign exchange, rates, and volatility at intraday horizons.
+We further show that macro events are associated with statistically significant shifts
+in cross-asset correlation structure, indicating temporary breakdowns in diversification.
+\end{abstract}
+
+\section{Introduction}
+Macro announcements introduce concentrated information shocks.
+Unlike continuous trading risk, event risk manifests as abrupt repricing across asset classes.
+Understanding both directional reactions and correlation dynamics around events
+is critical for portfolio construction and risk management.
+
+\section{Data}
+We use intraday market data at five-minute frequency for equities, FX, rates, and volatility.
+Macro event timestamps are obtained from an economic calendar API and aligned precisely
+with market data to capture immediate post-release reactions.
+
+\section{Methodology}
+
+\subsection{Event Alignment}
+For each macro event at time $t_0$, we extract a symmetric window
+$[t_0 - \Delta, t_0 + \Delta]$ and normalize prices relative to pre-event levels.
+
+\subsection{Event Impact Metrics}
+We compute:
+\begin{itemize}
+\item Event return
+\item Event volatility
+\item Cross-asset reaction dispersion
+\end{itemize}
+
+\subsection{Correlation Breakdown Analysis}
+Rolling correlation matrices are computed before and after each event.
+We measure correlation shifts using:
+\[
+\Delta \bar{\rho} = \bar{\rho}_{post} - \bar{\rho}_{pre}
+\]
+where $\bar{\rho}$ is the average pairwise correlation.
+
+\section{Empirical Results}
+
+\subsection{Single-Event Reactions}
+Figure~\ref{fig:event} shows the S\&P 500 reaction to a CPI release,
+highlighting abrupt repricing immediately following the announcement.
+
+\subsection{Cross-Asset Response}
+Figure~\ref{fig:crossasset} illustrates divergent responses across equities,
+FX, rates, and volatility, reflecting heterogeneous macro transmission channels.
+
+\subsection{Correlation Shifts Around Events}
+We observe systematic increases in average cross-asset correlation following
+high-impact events, indicating temporary diversification breakdowns.
+
+\section{Discussion}
+Macro events act as coordination points for market participants,
+compressing correlation structure and amplifying systemic risk.
+These effects are strongest during already fragile macro regimes.
+
+\section{Conclusion}
+Event-driven correlation dynamics highlight the importance of
+macro-aware risk management. Static diversification assumptions
+fail during periods of concentrated information release.
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}
