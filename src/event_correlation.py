@@ -9,10 +9,7 @@ def correlation_shift_around_event(
     pre_window=60,
     post_window=60
 ):
-    """
-    Computes average correlation shift around a macro event.
-    Windows are in minutes (assuming intraday data).
-    """
+ 
 
     pre_end = event_time
     pre_start = event_time - pd.Timedelta(minutes=pre_window)
