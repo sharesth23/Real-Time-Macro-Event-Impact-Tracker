@@ -1,7 +1,3 @@
-"""
-Link macro events to cross-asset correlation shifts.
-"""
-
 import pandas as pd
 from src.correlation import rolling_correlation
 from src.systemic_metrics import average_correlation
