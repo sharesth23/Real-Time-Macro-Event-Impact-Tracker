@@ -2,9 +2,6 @@ import requests
 import pandas as pd
 
 def fetch_macro_events(api_key, indicator, start_date, end_date):
-    """
-    Fetch macroeconomic releases with timestamps.
-    """
     url = "https://api.tradingeconomics.com/calendar"
     params = {
         "c": api_key,
