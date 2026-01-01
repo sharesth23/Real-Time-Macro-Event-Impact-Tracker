@@ -87,3 +87,16 @@ We compute the following event-level metrics:
     \item Event volatility: realized volatility following the announcement
     \item Reaction dispersion: cross-asset variability in responses
 \end{itemize}
+
+When survey forecasts are available, macro surprise is defined as the difference
+between the realized value and the consensus forecast.
+
+\subsection{Correlation Breakdown Analysis}
+To quantify systemic effects, we compute cross-asset correlation matrices
+before and after each macro event.
+Let $\bar{\rho}_{pre}$ and $\bar{\rho}_{post}$ denote the average pairwise correlation
+in the pre- and post-event windows, respectively.
+We define the correlation shift as:
+\[
+\Delta \bar{\rho} = \bar{\rho}_{post} - \bar{\rho}_{pre}
+\]
