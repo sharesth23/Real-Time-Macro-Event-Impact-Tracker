@@ -59,3 +59,15 @@ We study major U.S. macroeconomic announcements, including:
 Event timestamps and survey forecasts are obtained from a macroeconomic calendar API.
 Each event is recorded with precise release times to ensure accurate alignment
 with market data.
+
+\subsection{Market Data}
+Intraday market data at five-minute frequency is collected for representative
+cross-asset instruments:
+\begin{itemize}
+    \item Equities: S\&P 500 index
+    \item Foreign Exchange: EUR/USD, USD/JPY
+    \item Rates: U.S. 10-year Treasury yield
+    \item Volatility: VIX index
+\end{itemize}
+
+Prices are converted to log-returns for statistical analysis.
