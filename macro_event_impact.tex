@@ -71,3 +71,19 @@ cross-asset instruments:
 \end{itemize}
 
 Prices are converted to log-returns for statistical analysis.
+
+\section{Methodology}
+
+\subsection{Event Alignment}
+For each macro event occurring at time $t_0$, we extract a symmetric time window
+$[t_0 - \Delta, t_0 + \Delta]$, where $\Delta$ ranges from 30 to 120 minutes.
+Prices are normalized relative to their pre-event levels to allow for
+cross-asset comparison.
+
+\subsection{Event Impact Metrics}
+We compute the following event-level metrics:
+\begin{itemize}
+    \item Event return: cumulative return over the post-event window
+    \item Event volatility: realized volatility following the announcement
+    \item Reaction dispersion: cross-asset variability in responses
+\end{itemize}
