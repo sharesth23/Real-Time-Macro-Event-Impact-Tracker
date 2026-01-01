@@ -45,3 +45,17 @@ less attention has been paid to the dynamic behavior of cross-asset correlations
 around macro announcements.
 This paper addresses this gap by linking macro event risk directly to
 correlation breakdowns, a key driver of systemic risk during stress periods.
+
+\section{Data}
+
+\subsection{Macroeconomic Events}
+We study major U.S. macroeconomic announcements, including:
+\begin{itemize}
+    \item Consumer Price Index (CPI)
+    \item Non-Farm Payrolls (NFP)
+    \item Federal Open Market Committee (FOMC) rate decisions
+\end{itemize}
+
+Event timestamps and survey forecasts are obtained from a macroeconomic calendar API.
+Each event is recorded with precise release times to ensure accurate alignment
+with market data.
