@@ -1,3 +1,5 @@
+
+
 # 📊 Real-Time Macro Event Impact Tracker
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
@@ -9,6 +11,7 @@
 A research-focused Python project to **quantify and visualize the real-time impact of macroeconomic events on financial markets**. This system aligns macro events with asset price movements, computes impact metrics, and presents insights via experiments, visualizations, and an interactive dashboard.
 
 ---
+
 ## 🚀 Project Overview
 
 Macroeconomic events (CPI releases, rate decisions, GDP data, etc.) often cause sudden structural shifts in asset prices. This project aims to:
@@ -22,6 +25,15 @@ Macroeconomic events (CPI releases, rate decisions, GDP data, etc.) often cause 
 This repo is designed for **quant research, financial analytics, and academic experimentation**.
 
 ---
+
+## 🧠 Key Features
+
+* **Event Alignment Engine** – Map macro events to price timelines
+* **Impact Metrics** – Returns, volatility shifts, correlation changes
+* **Cross-Asset Analysis** – Equity, FX, crypto, or multi-asset support
+* **Experimental Pipelines** – Modular experiments for hypothesis testing
+* **Interactive Dashboard** – Streamlit-based UI for exploration
+* **Paper-Ready Outputs** – LaTeX paper + BibTeX references included
 
 ---
 
