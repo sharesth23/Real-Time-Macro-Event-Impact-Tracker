@@ -9,6 +9,17 @@
 A research-focused Python project to **quantify and visualize the real-time impact of macroeconomic events on financial markets**. This system aligns macro events with asset price movements, computes impact metrics, and presents insights via experiments, visualizations, and an interactive dashboard.
 
 ---
+## 🚀 Project Overview
+
+Macroeconomic events (CPI releases, rate decisions, GDP data, etc.) often cause sudden structural shifts in asset prices. This project aims to:
+
+* Detect and align macroeconomic events with market data
+* Measure short-term and cross-asset impacts
+* Analyze correlations and volatility responses
+* Visualize event-driven market behavior
+* Support reproducible research and experimentation
+
+This repo is designed for **quant research, financial analytics, and academic experimentation**.
 
 ---
 
