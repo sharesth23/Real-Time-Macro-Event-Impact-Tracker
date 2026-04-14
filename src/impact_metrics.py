@@ -21,3 +21,15 @@ def event_volatility(series: pd.Series):
         return np.nan
 
     return returns.std()
+def macro_surprise(actual, forecast , normalise = True):
+    """
+    Computes macro surprise index
+    """
+    if  forecast == 0:
+        return np.nan
+    raw = actual- forecast 
+
+    if normalise :
+        return raw / abs(forecast)
+    
+    return raw 
