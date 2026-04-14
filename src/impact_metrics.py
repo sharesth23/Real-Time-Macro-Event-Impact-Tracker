@@ -33,3 +33,15 @@ def macro_surprise(actual, forecast , normalise = True):
         return raw / abs(forecast)
     
     return raw 
+
+def event_drawdown(series: pd.Series):
+    """
+    Computes max drawdown during event window
+    """
+    returns = series.pct_change().dropna()
+    cum = (1 + returns).cumprod()
+
+    peak = cum.cummax()
+    drawdown = (cum - peak) / peak
+
+    return drawdown.min()
