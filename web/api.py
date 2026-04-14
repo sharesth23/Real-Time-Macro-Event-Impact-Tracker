@@ -4,7 +4,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.append(str(ROOT))
 
-from src.data_loader import load_event_data
+from dashboard import app
+from src.data_loader import load_data, load_event_data
 from src.impact_metrics import compute_metrics
 from flask import Blueprint, request, jsonify
 
@@ -20,3 +21,12 @@ def metrics():
     metrics = compute_metrics(df)
 
     return jsonify(metrics)
+import app
+
+@app.get("/analyze")
+def analyze(event: str, asset: str, window: int = 60):
+    data = load_data(asset)
+    aligned = align_event(data, event, window)
+    metrics = compute_metrics(aligned, window)
+
+    return metrics
