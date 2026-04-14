@@ -32,3 +32,14 @@ def build_event_dataset():
     events = events.sort_values("date")
 
     return events
+
+def get_fomc_events():
+    dates = [
+        "2023-01-31", "2023-03-22", "2023-05-03",
+        "2023-06-14", "2023-07-26"
+    ]
+
+    return pd.DataFrame({
+        "date": pd.to_datetime(dates),
+        "event": "FOMC"
+    })
